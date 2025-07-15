@@ -364,17 +364,26 @@ graph LR
     subgraph "구현 복잡도"
         Simple[간단함] --> Medium[중간] --> Complex[복잡함]
         
-        RBAC[RBAC<br/>- 테이블 조인<br/>- 정적 매핑] --> Simple
-        ReBAC[ReBAC<br/>- 그래프 순회<br/>- 관계 계산] --> Medium
-        ABAC[ABAC<br/>- 다중 속성 평가<br/>- 동적 조건 처리] --> Complex
+        RBAC["RBAC
+        테이블 조인
+        정적 매핑"] --> Simple
+        ReBAC["ReBAC
+        그래프 순회
+        관계 계산"] --> Medium
+        ABAC["ABAC
+        다중 속성 평가
+        동적 조건 처리"] --> Complex
     end
     
     subgraph "성능 특성"
         Fast[빠름] --> Moderate[보통] --> Slow[느림]
         
-        RBAC2[RBAC<br/>O(1) 룩업] --> Fast
-        ReBAC2[ReBAC<br/>O(depth) 순회] --> Moderate
-        ABAC2[ABAC<br/>O(n) 속성 평가] --> Slow
+        RBAC2["RBAC
+        O(1) 룩업"] --> Fast
+        ReBAC2["ReBAC
+        O(depth) 순회"] --> Moderate
+        ABAC2["ABAC
+        O(n) 속성 평가"] --> Slow
     end
     
     style RBAC fill:#c8e6c9
